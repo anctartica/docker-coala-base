@@ -30,7 +30,7 @@ RUN \
       # science contains latest Julia
       --plus-repo http://download.opensuse.org/repositories/science/openSUSE_Tumbleweed/ \
       # luarocks
-      --plus-repo http://download.opensuse.org/repositories/devel:languages:lua/openSUSE_Factory/ \
+      --plus-repo http://download.opensuse.org/repositories/devel:languages:lua/openSUSE_Tumbleweed/ \
       # brotlipy
       --plus-repo http://download.opensuse.org/repositories/devel:languages:python/openSUSE_Tumbleweed/ \
       # ruby 2.2
@@ -39,8 +39,6 @@ RUN \
       --plus-repo http://download.opensuse.org/repositories/home:illuusio/openSUSE_Tumbleweed/ \
       # astyle
       --plus-repo http://download.opensuse.org/repositories/devel:tools/openSUSE_Tumbleweed/ \
-      # Python 3 packages
-      --plus-repo http://download.opensuse.org/repositories/devel:languages:python3/openSUSE_Tumbleweed/ \
       # stable packages built for coala
       --plus-repo http://download.opensuse.org/repositories/home:jayvdb:coala/openSUSE_Tumbleweed/ \
       install --replacefiles --download-in-advance \
@@ -55,11 +53,10 @@ RUN \
     git \
     go1.7 \
     mercurial \
-    hlint \
     indent \
     java-1_8_0-openjdk-headless \
     julia \
-    libclang3_8 \
+    libclang4 \
     # libcurl-devel needed by R httr
     libcurl-devel \
     # icu needed by R stringi
@@ -82,8 +79,8 @@ RUN \
     m4 \
     nltk-data-averaged_perceptron_tagger \
     nltk-data-punkt \
-    nodejs7 \
-    npm7 \
+    nodejs8 \
+    npm8 \
     # patch is used by Ruby gem pg_query
     patch \
     perl-Perl-Critic \
@@ -109,7 +106,7 @@ RUN \
     R-base \
     ruby2.2 \
     ruby2.2-devel \
-    ruby2.2-rubygem-bundler \
+    ruby2.5-rubygem-bundler \
     ShellCheck \
     subversion \
     tar \
